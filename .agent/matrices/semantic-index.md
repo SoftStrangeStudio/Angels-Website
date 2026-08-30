@@ -4,6 +4,11 @@ Every meaningful project item gets an ID so future work can trace purpose, lesso
 
 | ID | Type | Name | Location | Purpose | Related Lesson | Status |
 |---|---|---|---|---|---|---|
+| COMP-010 | Component | Homepage Paper Scroll Experience | `app/PaperScrollExperience.jsx`, `app/paper-scroll-experience.module.css`, `public/shader-canvas/` | Homepage-only vertical torn-paper background and native-scroll paper runway | LESSON-041, FEEDBACK-026 | active |
+| INT-012 | Interaction | Downward Paper Continuation | PAGE-001 | Advances procedural paper only after content while preserving upward/native navigation | LESSON-041, FEEDBACK-026 | active |
+| METRIC-033 | Quality Metric | Pages Prefix Integrity | `next.config.mjs`, active routes/assets, static export | All shipped paths resolve beneath `/Angels-Website/` without missing CSS, scripts, images, or shader assets | LESSON-041 | active |
+| LESSON-041 | Lesson | Treat deployment prefix as one runtime contract | `next.config.mjs`, route data, public assets, audit scripts | Repository rename must update framework prefix and every active hard-coded route/asset path together | FEEDBACK-026 | active |
+| FEEDBACK-026 | Feedback | Raw unstyled Pages deployment | Live `/Angels-Website/` screenshot and path inspection | Missing CSS/images were caused by stale `/Website/` URLs; the shader was not the cause | LESSON-041, METRIC-033 | resolved |
 | PAGE-001 | Page | Homepage | `app/page.jsx`, `app/home-gemini-reference-pass.css` | Approved Gemini-reference front room with four image-led studio doors | LESSON-001, LESSON-002, LESSON-015, LESSON-018, LESSON-019, LESSON-021, LESSON-022 | active |
 | PAGE-002 | Page | About | `app/about/page.jsx`, `app/editorial-page.jsx` | Single-column studio orientation using shared editorial hero, cards, notes, and next-room views | LESSON-001, LESSON-002, LESSON-004, LESSON-022 | active |
 | PAGE-003 | Page | Notes | `app/notes/page.jsx`, `app/notes/NotesPageClient.jsx`, `app/editorial-page.jsx` | Public notes index with live feed behavior inside the shared editorial room system | LESSON-002, LESSON-004, LESSON-022 | active |

@@ -1,5 +1,19 @@
 # Lesson Log
 
+## LESSON-041 — Treat the deployment prefix as one runtime contract
+
+Timestamp: 2026-08-30 18:34 ET
+Context: Repository ownership/path migration
+Status: active
+
+### Lesson
+
+Changing the GitHub Pages repository path requires one coordinated update across Next.js configuration, active navigation, public assets, shader URLs, and audit tooling. A partial migration can leave semantic HTML visible while every visual and interactive asset fails.
+
+### Future rule
+
+After any Pages repository rename, build the export and prove representative CSS, script, image, and route URLs beneath the exact deployed prefix before pushing.
+
 ## LESSON-001 — Make homepage feel authored
 
 Timestamp: 2026-06-23 22:40 ET  

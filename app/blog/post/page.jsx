@@ -6,5 +6,5 @@ export const metadata = {
 };
 
 export default function BlogPostPage() {
-  return <PostReaderClient backHref="/Website/blog/" backLabel="Back to Blog archive" contextLabel="Blog archive" />;
+  return <PostReaderClient backHref="/Angels-Website/blog/" backLabel="Back to Blog archive" contextLabel="Blog archive" />;
 }

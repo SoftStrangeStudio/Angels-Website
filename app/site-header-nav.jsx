@@ -4,21 +4,21 @@ import { usePathname } from "next/navigation";
 import { siteNavPages } from "./site-data";
 
 function normalizePath(path) {
-  if (!path) return "/Website";
+  if (!path) return "/Angels-Website";
   const cleanPath = path.endsWith("/") && path !== "/" ? path.slice(0, -1) : path;
-  return cleanPath || "/Website";
+  return cleanPath || "/Angels-Website";
 }
 
 function isActiveRoute(pathname, href) {
   const currentPath = normalizePath(pathname);
   const targetPath = normalizePath(href);
 
-  if (targetPath === "/Website") {
-    return currentPath === "/Website";
+  if (targetPath === "/Angels-Website") {
+    return currentPath === "/Angels-Website";
   }
 
-  if (targetPath === "/Website/notes") {
-    return currentPath.startsWith("/Website/notes") || currentPath.startsWith("/Website/blog");
+  if (targetPath === "/Angels-Website/notes") {
+    return currentPath.startsWith("/Angels-Website/notes") || currentPath.startsWith("/Angels-Website/blog");
   }
 
   return currentPath === targetPath || currentPath.startsWith(`${targetPath}/`);

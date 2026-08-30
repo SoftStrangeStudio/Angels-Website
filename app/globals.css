@@ -14,7 +14,7 @@
   --lavender: #bca5c6;
   --line: rgba(51, 44, 42, 0.14);
   --shadow: rgba(48, 40, 34, 0.18);
-  --grain: url("/Website/atmosphere/grain-noise.svg");
+  --grain: url("/Angels-Website/atmosphere/grain-noise.svg");
 }
 
 * {

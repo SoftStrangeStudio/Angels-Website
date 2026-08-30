@@ -9,6 +9,7 @@ These rules should shape current Website work.
 - Keep public memory distilled and safe.
 - Update matrices after meaningful changes.
 - Update the relationship map when pages, components, or data sources connect in new ways.
+- Treat the GitHub Pages base path as one runtime contract: framework config, navigation, public assets, shaders, and audit tooling must change together.
 - When Angel gives small feedback points, extract the reusable project signal and store only the public-safe lesson.
 - Put unclear feedback in the feedback inbox instead of inventing a lesson.
 - Validate visual/current-site notes against the live Website and repo source before mapping them to lessons.

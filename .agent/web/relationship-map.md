@@ -1,5 +1,8 @@
 # Relationship Map
 
+- PAGE-001 owns COMP-010, which uses the shared `<shader-canvas>` runtime and remains isolated from secondary routes.
+- METRIC-033 binds `next.config.mjs`, active navigation, public assets, shaders, and audit commands to the `/Angels-Website/` deployment prefix.
+
 ## Active Website routes
 
 - PAGE-001 Home uses `app/page.jsx` and now pulls homepage highlights from `app/site-data.js`.

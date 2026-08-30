@@ -74,8 +74,8 @@ export default function AboutPage() {
       <EditorialNext
         title="Continue through the studio"
         links={[
-          { eyebrow: "Read", title: "Studio Notes", description: "Public notes and reflections.", href: "/Website/notes/" },
-          { eyebrow: "Look", title: "Selected work", description: "Projects, art direction, and experiments.", href: "/Website/portfolio/" }
+          { eyebrow: "Read", title: "Studio Notes", description: "Public notes and reflections.", href: "/Angels-Website/notes/" },
+          { eyebrow: "Look", title: "Selected work", description: "Projects, art direction, and experiments.", href: "/Angels-Website/portfolio/" }
         ]}
       />
     </EditorialPage>

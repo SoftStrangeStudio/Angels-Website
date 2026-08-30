@@ -15,7 +15,7 @@ on:
       base_url:
         description: Website base URL to audit
         required: false
-        default: https://angelberger09.github.io/Website/
+        default: https://softstrangestudio.github.io/Angels-Website/
       routes:
         description: Comma-separated route list
         required: false
@@ -41,7 +41,7 @@ jobs:
 
       - name: Run audit
         env:
-          AUDIT_BASE_URL: ${{ inputs.base_url || 'https://angelberger09.github.io/Website/' }}
+          AUDIT_BASE_URL: ${{ inputs.base_url || 'https://softstrangestudio.github.io/Angels-Website/' }}
           AUDIT_ROUTES: ${{ inputs.routes || '/,/about/,/notes/,/portfolio/,/store/' }}
         run: node scripts/audit-website.mjs --base="$AUDIT_BASE_URL" --routes="$AUDIT_ROUTES"
 

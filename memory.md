@@ -26,6 +26,6 @@ Soft Strange Studio is a public Next.js site for honest notes, selected work, fu
 ## Validation
 
 - Run `npm run build` for the production static export.
-- Run `node scripts/audit-website.mjs --base=http://localhost:<port>/Website/ --routes=/,/about/,/notes/,/portfolio/,/store/,/blog/ --out=logs/<run-name> --no-trace` for desktop and mobile proof.
+- Run `node scripts/audit-website.mjs --base=http://localhost:<port>/Angels-Website/ --routes=/,/about/,/notes/,/portfolio/,/store/,/blog/ --out=logs/<run-name> --no-trace` for desktop and mobile proof.
 - Open at least one `/notes/post/?slug=<published-slug>` route during reader validation.
 - Keep `design-qa.md` current when a visual reference drives implementation.

@@ -83,7 +83,7 @@ async function fetchJsonWithFallback(urls) {
 }
 
 export default function PostReaderClient({
-  backHref = "/Website/notes/",
+  backHref = "/Angels-Website/notes/",
   backLabel = "Back to Studio Notes",
   contextLabel = "Studio Notes"
 }) {
@@ -159,7 +159,7 @@ export default function PostReaderClient({
           title="When you finish reading"
           links={[
             { eyebrow: "Return", title: "Studio Notes", description: "Choose another note from the shelf.", href: backHref },
-            { eyebrow: "Continue", title: "Selected work", description: "Move from the writing table into the public archive.", href: "/Website/portfolio/" }
+            { eyebrow: "Continue", title: "Selected work", description: "Move from the writing table into the public archive.", href: "/Angels-Website/portfolio/" }
           ]}
         />
       </div>

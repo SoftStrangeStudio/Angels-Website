@@ -6,5 +6,5 @@ export const metadata = {
 };
 
 export default function BlogPage() {
-  return <NotesPageClient routeBase="/Website/blog" routeLabel="Blog archive" />;
+  return <NotesPageClient routeBase="/Angels-Website/blog" routeLabel="Blog archive" />;
 }

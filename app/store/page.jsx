@@ -54,8 +54,8 @@ export default function StorePage() {
       <EditorialNext
         title="See where the pieces come from"
         links={[
-          { eyebrow: "Look", title: "Selected work", description: "The visual worlds behind future pieces.", href: "/Website/portfolio/" },
-          { eyebrow: "Meet", title: "About the studio", description: "The person and principles behind the shelf.", href: "/Website/about/" }
+          { eyebrow: "Look", title: "Selected work", description: "The visual worlds behind future pieces.", href: "/Angels-Website/portfolio/" },
+          { eyebrow: "Meet", title: "About the studio", description: "The person and principles behind the shelf.", href: "/Angels-Website/about/" }
         ]}
       />
     </EditorialPage>

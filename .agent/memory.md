@@ -5,13 +5,15 @@ This file stores distilled, public-safe memory for the Website repo.
 ## Current facts
 
 - The public Website is the main Soft Strange Studio front door.
-- The public URL is `https://angelberger09.github.io/Website/`.
+- The public URL is `https://softstrangestudio.github.io/Angels-Website/`.
 - The site uses Next.js App Router with static export for GitHub Pages.
 - Home, About, Notes, Portfolio, Store, Blog compatibility, and post-reader routes are active.
 - Notes and post readers consume published public Blog data with public-path and raw-GitHub fallbacks.
 - The shared route view layer lives in `app/editorial-page.jsx`.
 - The shared chrome lives in `app/site-chrome.jsx`.
 - The active visual CSS is limited to `app/globals.css` and `app/home-gemini-reference-pass.css`.
+- The homepage mounts a fixed, pointer-transparent WebGL2 torn-paper layer through `PaperScrollExperience`; all other routes remain on the shared editorial system.
+- The GitHub Pages base path is `/Angels-Website`; runtime links and public assets must use that exact prefix.
 - Older pass styles remain as historical artifacts but are not imported at runtime.
 - Editorial image assets live in `public/images/editorial/`.
 

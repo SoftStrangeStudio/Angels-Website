@@ -12,6 +12,16 @@ Format:
 YYYY-MM-DD HH:mm ET
 ```
 
+## FEEDBACK-026 — Raw unstyled Pages deployment after repository rename
+
+Timestamp: 2026-08-30 18:34 ET
+Status: resolved in implementation
+Source: Live GitHub Pages screenshot and repository path inspection
+
+### Public-safe summary
+
+The renamed `/Angels-Website/` deployment loaded HTML while CSS, scripts, images, and links still targeted `/Website/`. The deployment prefix must be updated as one shared runtime contract; this failure is independent of the paper shader.
+
 ## FEEDBACK-001 — Reduce static structure and add animated atmosphere
 
 Timestamp: 2026-06-23 23:09 ET  

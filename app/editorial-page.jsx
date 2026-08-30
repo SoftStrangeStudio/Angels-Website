@@ -1,8 +1,8 @@
 export const editorialImages = {
-  notes: "/Website/images/editorial/notes-journal.jpg",
-  art: "/Website/images/editorial/art-sketchbook.jpg",
-  shop: "/Website/images/editorial/shop-goods.jpg",
-  about: "/Website/images/editorial/about-studio.jpg"
+  notes: "/Angels-Website/images/editorial/notes-journal.jpg",
+  art: "/Angels-Website/images/editorial/art-sketchbook.jpg",
+  shop: "/Angels-Website/images/editorial/shop-goods.jpg",
+  about: "/Angels-Website/images/editorial/about-studio.jpg"
 };
 
 export function EditorialPage({ eyebrow, title, intro, image, imageAlt, children }) {

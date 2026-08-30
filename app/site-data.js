@@ -2,28 +2,28 @@ export const siteNavPages = [
   {
     title: "About",
     eyebrow: "Studio intro",
-    href: "/Website/about/",
+    href: "/Angels-Website/about/",
     roomCue: "Open map",
     description: "Meet the public shape of Soft Strange Studio and the kind of work this space is holding."
   },
   {
     title: "Notes",
     eyebrow: "Still Here Notes",
-    href: "/Website/notes/",
+    href: "/Angels-Website/notes/",
     roomCue: "Reading shelf",
     description: "Read public notes in the studio reader while the writing source stays quietly organized."
   },
   {
     title: "Portfolio",
     eyebrow: "Public work",
-    href: "/Website/portfolio/",
+    href: "/Angels-Website/portfolio/",
     roomCue: "Public archive",
     description: "Browse the first project doors for site systems, visual atmosphere, creature work, and public experiments."
   },
   {
     title: "Store",
     eyebrow: "Future shop",
-    href: "/Website/store/",
+    href: "/Angels-Website/store/",
     roomCue: "Preparing",
     description: "See the product paths being prepared for digital downloads, creature goods, and soft strange studio pieces."
   }
@@ -137,17 +137,17 @@ export const aboutPrinciples = [
 export const aboutPathways = [
   {
     label: "Read",
-    href: "/Website/notes/",
+    href: "/Angels-Website/notes/",
     description: "Public notes and reflections inside the Website reader."
   },
   {
     label: "Look",
-    href: "/Website/portfolio/",
+    href: "/Angels-Website/portfolio/",
     description: "A growing archive of site systems, visual language, and public work."
   },
   {
     label: "Prepare",
-    href: "/Website/store/",
+    href: "/Angels-Website/store/",
     description: "Future product lanes kept clear without inventing live listings."
   }
 ];

@@ -2,6 +2,7 @@
 
 | Interaction ID | Name | Trigger | Expected Result | Accessibility Notes | Lesson | Status |
 |---|---|---|---|---|---|---|
+| INT-012 | Downward Paper Continuation | Scroll below homepage content | One transition viewport passes, then the procedural paper advances only with downward deltas while the native page can still scroll upward | No wheel/touch/key handlers; pointer-transparent shader; reduced motion keeps a stationary paper frame | LESSON-041 | active |
 | INT-001 | Open Pages Menu | Click or focus the `Pages` summary | Folder panel opens with four destination links | Native `details` behavior; keep focus states visible | LESSON-003 | active |
 | INT-002 | Back to Top | Click `Angel Berger` in header | Page scrolls to top | Anchor target is `#top` | LESSON-002 | active |
 | INT-003 | Scroll Title Sequence | User scrolls down homepage | User sees Welcome, To, Soft Strange Studio | No required animation; readable as normal content | LESSON-001 | active |

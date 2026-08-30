@@ -8,13 +8,13 @@ The site is the public front door for studio work, notes, portfolio pieces, and 
 
 ## Current page shape
 
-- `/Website/` is the studio landing page with a scroll title and four page doors.
-- `/Website/about/` introduces the public studio shape and what belongs here.
-- `/Website/notes/` renders published public notes from the Blog repo inside the Website shell.
-- `/Website/notes/post/?slug=...` renders individual notes inside the Website reader.
-- `/Website/portfolio/` presents the first public project/archive cards.
-- `/Website/store/` presents prepared product lanes for future shop links.
-- `/Website/blog/` and `/Website/blog/post/?slug=...` remain compatibility routes for the same notes reader.
+- `/Angels-Website/` is the studio landing page with a scroll title and four page doors.
+- `/Angels-Website/about/` introduces the public studio shape and what belongs here.
+- `/Angels-Website/notes/` renders published public notes from the Blog repo inside the Website shell.
+- `/Angels-Website/notes/post/?slug=...` renders individual notes inside the Website reader.
+- `/Angels-Website/portfolio/` presents the first public project/archive cards.
+- `/Angels-Website/store/` presents prepared product lanes for future shop links.
+- `/Angels-Website/blog/` and `/Angels-Website/blog/post/?slug=...` remain compatibility routes for the same notes reader.
 
 ## Connected repos
 

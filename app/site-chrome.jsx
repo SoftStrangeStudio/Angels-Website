@@ -3,11 +3,11 @@
 import { usePathname } from "next/navigation";
 
 const navItems = [
-  { title: "Home", href: "/Website/" },
-  { title: "Studio Notes", href: "/Website/notes/" },
-  { title: "Art", href: "/Website/portfolio/" },
-  { title: "Shop", href: "/Website/store/" },
-  { title: "About", href: "/Website/about/" },
+  { title: "Home", href: "/Angels-Website/" },
+  { title: "Studio Notes", href: "/Angels-Website/notes/" },
+  { title: "Art", href: "/Angels-Website/portfolio/" },
+  { title: "Shop", href: "/Angels-Website/store/" },
+  { title: "About", href: "/Angels-Website/about/" },
   { title: "Contact", href: "#contact" }
 ];
 
@@ -19,8 +19,8 @@ function normalizePath(path) {
 function isActiveRoute(pathname, href) {
   if (href.startsWith("#")) return false;
 
-  const current = normalizePath(pathname).replace(/^\/Website/, "") || "/";
-  const target = normalizePath(href).replace(/^\/Website/, "") || "/";
+  const current = normalizePath(pathname).replace(/^\/Angels-Website/, "") || "/";
+  const target = normalizePath(href).replace(/^\/Angels-Website/, "") || "/";
 
   if (target === "/notes") {
     return current.startsWith("/notes") || current.startsWith("/blog");
@@ -35,11 +35,11 @@ export function SiteHeader() {
   return (
     <header className="reference-header" aria-label="Site header">
       <div className="reference-header__shell">
-        <a className="reference-header__brand" href="/Website/" aria-label="Soft Strange Studio home">
+        <a className="reference-header__brand" href="/Angels-Website/" aria-label="Soft Strange Studio home">
           <span className="reference-header__brand-mark" aria-hidden="true" />
           <span>Soft Strange Studio</span>
         </a>
-        <a className="reference-header__title" href="/Website/">Soft Strange Studio</a>
+        <a className="reference-header__title" href="/Angels-Website/">Soft Strange Studio</a>
         <nav className="reference-header__nav" aria-label="Primary">
           {navItems.map((item) => {
             const active = isActiveRoute(pathname, item.href);
@@ -62,7 +62,7 @@ export function SiteHeader() {
 
 export function StudioFooter() {
   const pathname = usePathname();
-  const current = normalizePath(pathname).replace(/^\/Website/, "") || "/";
+  const current = normalizePath(pathname).replace(/^\/Angels-Website/, "") || "/";
   if (current === "/") return null;
 
   return (

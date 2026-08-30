@@ -12,7 +12,7 @@ This prevents the assistant from guessing what a screenshot shows, applying feed
 
 Use these sources in this order:
 
-1. **Live Website** — `https://angelberger09.github.io/Website/`
+1. **Live Website** — `https://softstrangestudio.github.io/Angels-Website/`
 2. **Current Website source** — `app/page.jsx`, `app/site-chrome.jsx`, `app/site-data.js`, route files, CSS, and `public/` assets
 3. **Project memory** — `.agent/matrices/semantic-index.md`, `.agent/lessons/active-lessons.md`, and the matching matrix files
 4. **Feedback history** — `.agent/feedback/feedback-log.md`, `.agent/lessons/lesson-log.md`, and `.agent/references/`

@@ -8,13 +8,13 @@ export const pageContinuity = {
       {
         title: "Meet the studio",
         eyebrow: "About",
-        href: "/Website/about/",
+        href: "/Angels-Website/about/",
         description: "Use About when you want the clearest orientation to the tone, scope, and public-safe memory rules."
       },
       {
         title: "Read the notes",
         eyebrow: "Notes",
-        href: "/Website/notes/",
+        href: "/Angels-Website/notes/",
         description: "Use Notes when you want the living writing surface that stays inside the Website shell."
       }
     ]
@@ -28,13 +28,13 @@ export const pageContinuity = {
       {
         title: "Read public writing",
         eyebrow: "Notes",
-        href: "/Website/notes/",
+        href: "/Angels-Website/notes/",
         description: "Move from studio context into the published notes reader."
       },
       {
         title: "Browse active systems",
         eyebrow: "Portfolio",
-        href: "/Website/portfolio/",
+        href: "/Angels-Website/portfolio/",
         description: "See the first public archive cards and the lanes that can deepen into case studies."
       }
     ]
@@ -48,13 +48,13 @@ export const pageContinuity = {
       {
         title: "See the systems",
         eyebrow: "Portfolio",
-        href: "/Website/portfolio/",
+        href: "/Angels-Website/portfolio/",
         description: "Follow the writing into the current public work and site systems."
       },
       {
         title: "Return to the front room",
         eyebrow: "Home",
-        href: "/Website/",
+        href: "/Angels-Website/",
         description: "Go back to the landing page when you want the full studio map again."
       }
     ]
@@ -68,13 +68,13 @@ export const pageContinuity = {
       {
         title: "Return to notes",
         eyebrow: "Notes",
-        href: "/Website/notes/",
+        href: "/Angels-Website/notes/",
         description: "Go back to the published notes index and choose another piece."
       },
       {
         title: "Follow into projects",
         eyebrow: "Portfolio",
-        href: "/Website/portfolio/",
+        href: "/Angels-Website/portfolio/",
         description: "Move from the writing surface into the public project archive and studio systems."
       }
     ]
@@ -88,13 +88,13 @@ export const pageContinuity = {
       {
         title: "Read the context",
         eyebrow: "Notes",
-        href: "/Website/notes/",
+        href: "/Angels-Website/notes/",
         description: "Use the notes as a companion layer for process, studio thinking, and public reflections."
       },
       {
         title: "Check future goods",
         eyebrow: "Store",
-        href: "/Website/store/",
+        href: "/Angels-Website/store/",
         description: "Move from project language into the prepared product lanes."
       }
     ]
@@ -108,13 +108,13 @@ export const pageContinuity = {
       {
         title: "See the visual world",
         eyebrow: "Portfolio",
-        href: "/Website/portfolio/",
+        href: "/Angels-Website/portfolio/",
         description: "Browse the public archive lanes that future products can grow out of."
       },
       {
         title: "Understand the tone",
         eyebrow: "About",
-        href: "/Website/about/",
+        href: "/Angels-Website/about/",
         description: "Return to the studio principles behind the public shop promise."
       }
     ]

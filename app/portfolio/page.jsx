@@ -62,8 +62,8 @@ export default function PortfolioPage() {
       <EditorialNext
         title="Follow the work"
         links={[
-          { eyebrow: "Read", title: "Studio Notes", description: "Reflections and context behind the work.", href: "/Website/notes/" },
-          { eyebrow: "Preview", title: "Future shop", description: "Small goods and paper pieces being prepared.", href: "/Website/store/" }
+          { eyebrow: "Read", title: "Studio Notes", description: "Reflections and context behind the work.", href: "/Angels-Website/notes/" },
+          { eyebrow: "Preview", title: "Future shop", description: "Small goods and paper pieces being prepared.", href: "/Angels-Website/store/" }
         ]}
       />
     </EditorialPage>

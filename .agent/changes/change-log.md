@@ -2,6 +2,25 @@
 
 This log uses local project time in `America/New_York`.
 
+## 2026-08-30 18:34 EDT — Pages path repair and vertical paper runway
+
+### Changed
+
+- Migrated the production base path, navigation, and active asset URLs from `/Website/` to `/Angels-Website/`.
+- Added a homepage-only, scroll-driven vertical torn-paper shader with one viewport of transition space and an expandable native-scroll runway.
+- Extended `<shader-canvas>` with cached external uniforms and manual rendering while preserving its existing default behavior.
+- Kept the shared header, secondary routes, Notes data flow, card dimensions, and deploy workflow unchanged.
+- Migrated the separate audit and visual-tour workflow targets after their live runs proved they still requested `/Website/`.
+
+### Related items
+
+- PAGE-001
+- COMP-010
+- INT-012
+- METRIC-033
+- LESSON-041
+- FEEDBACK-026
+
 ## 2026-07-09 18:54 EDT — Whole-site editorial reference overhaul
 
 ### Changed

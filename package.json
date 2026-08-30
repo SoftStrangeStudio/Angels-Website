@@ -8,8 +8,8 @@
     "build": "next build && rm -rf dist && cp -R out dist",
     "start": "next start",
     "audit:website": "node scripts/audit-website.mjs",
-    "audit:website:live": "node scripts/audit-website.mjs --base https://angelberger09.github.io/Website/",
-    "audit:website:local": "node scripts/audit-website.mjs --base http://localhost:3000/Website/"
+    "audit:website:live": "node scripts/audit-website.mjs --base https://softstrangestudio.github.io/Angels-Website/",
+    "audit:website:local": "node scripts/audit-website.mjs --base http://localhost:3000/Angels-Website/"
   },
   "dependencies": {
     "next": "^15.1.0",

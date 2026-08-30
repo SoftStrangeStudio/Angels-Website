@@ -15,6 +15,7 @@ template.innerHTML = `
       contain: layout paint style;
       isolation: isolate;
       pointer-events: none;
+      background: var(--shader-fallback-background, transparent);
     }
 
     canvas,
@@ -29,6 +30,13 @@ template.innerHTML = `
     canvas {
       z-index: 1;
       pointer-events: none;
+    }
+
+    :host([fallback-fill]) img {
+      left: var(--fallback-left, 0%);
+      right: auto;
+      width: calc(var(--fallback-right, 100%) - var(--fallback-left, 0%));
+      object-fit: fill;
     }
 
     :host([interactive]) {
@@ -106,7 +114,7 @@ function createProgram(gl, vertexSource, fragmentSource) {
 
 export class ShaderCanvas extends HTMLElement {
   static get observedAttributes() {
-    return ["fallback", "paused", "quality", "max-dpr", "interactive"];
+    return ["fallback", "paused", "quality", "max-dpr", "interactive", "render-mode"];
   }
 
   #canvas;
@@ -127,6 +135,8 @@ export class ShaderCanvas extends HTMLElement {
   #contextLost = false;
   #loadToken = 0;
   #pointer = [0.5, 0.5];
+  #customUniforms = new Map();
+  #customUniformLocations = new Map();
 
   constructor() {
     super();
@@ -222,6 +232,32 @@ export class ShaderCanvas extends HTMLElement {
     this.removeAttribute("paused");
   }
 
+  setFloat(name, value) {
+    if (typeof name !== "string" || !name.startsWith("u")) {
+      throw new TypeError("Uniform names must be strings beginning with 'u'.");
+    }
+    if (!Number.isFinite(value)) {
+      throw new TypeError(`${name} must be a finite number.`);
+    }
+    this.#customUniforms.set(name, { type: "1f", values: [value] });
+    this.requestRender();
+  }
+
+  setVector2(name, x, y) {
+    if (typeof name !== "string" || !name.startsWith("u")) {
+      throw new TypeError("Uniform names must be strings beginning with 'u'.");
+    }
+    if (!Number.isFinite(x) || !Number.isFinite(y)) {
+      throw new TypeError(`${name} values must be finite numbers.`);
+    }
+    this.#customUniforms.set(name, { type: "2f", values: [x, y] });
+    this.requestRender();
+  }
+
+  requestRender() {
+    this.#renderOnce();
+  }
+
   async #initialize() {
     const loadToken = ++this.#loadToken;
     this.removeAttribute("data-shader-ready");
@@ -255,6 +291,7 @@ export class ShaderCanvas extends HTMLElement {
         pointer: gl.getUniformLocation(this.#program, "uPointer"),
         reducedMotion: gl.getUniformLocation(this.#program, "uReducedMotion"),
       };
+      this.#customUniformLocations.clear();
 
       gl.useProgram(this.#program);
       gl.bindVertexArray(this.#vao);
@@ -319,6 +356,7 @@ export class ShaderCanvas extends HTMLElement {
     gl.uniform1f(this.#uniforms.time, elapsed);
     gl.uniform2f(this.#uniforms.pointer, this.#pointer[0], this.#pointer[1]);
     gl.uniform1f(this.#uniforms.reducedMotion, this.#reducedMotion ? 1 : 0);
+    this.#applyCustomUniforms();
     gl.drawArrays(gl.TRIANGLES, 0, 3);
 
     if (this.#shouldAnimate()) {
@@ -346,7 +384,23 @@ export class ShaderCanvas extends HTMLElement {
       && this.#visible
       && this.#documentVisible
       && !this.hasAttribute("paused")
+      && this.getAttribute("render-mode") !== "manual"
       && !this.#reducedMotion;
+  }
+
+  #applyCustomUniforms() {
+    for (const [name, uniform] of this.#customUniforms) {
+      if (!this.#customUniformLocations.has(name)) {
+        this.#customUniformLocations.set(name, this.#gl.getUniformLocation(this.#program, name));
+      }
+      const location = this.#customUniformLocations.get(name);
+      if (location === null) continue;
+      if (uniform.type === "1f") {
+        this.#gl.uniform1f(location, uniform.values[0]);
+      } else if (uniform.type === "2f") {
+        this.#gl.uniform2f(location, uniform.values[0], uniform.values[1]);
+      }
+    }
   }
 
   #canRender() {
@@ -375,6 +429,7 @@ export class ShaderCanvas extends HTMLElement {
     this.#vao = null;
     this.#program = null;
     this.#uniforms = null;
+    this.#customUniformLocations.clear();
     this.#gl = null;
     this.removeAttribute("data-shader-ready");
   }

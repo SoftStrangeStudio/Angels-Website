@@ -49,9 +49,11 @@ jobs:
 
       - name: Serve built Website locally
         run: |
-          npx serve out -l 4173 > /tmp/soft-strange-website-serve.log 2>&1 &
+          mkdir -p /tmp/soft-strange-preview-root/Angels-Website
+          cp -R out/. /tmp/soft-strange-preview-root/Angels-Website/
+          npx serve /tmp/soft-strange-preview-root -l 4173 > /tmp/soft-strange-website-serve.log 2>&1 &
           for attempt in {1..45}; do
-            if curl -fsS http://127.0.0.1:4173/Website/ > /dev/null; then
+            if curl -fsS http://127.0.0.1:4173/Angels-Website/ > /dev/null; then
               echo "Local Website is ready."
               exit 0
             fi
@@ -82,7 +84,7 @@ jobs:
       - name: Render scroll walkthrough and interaction simulation videos
         run: |
           node .agent/tools/SoftStrange-WebsiteAuditor.mjs \
-            --base-url http://127.0.0.1:4173/Website \
+            --base-url http://127.0.0.1:4173/Angels-Website \
             --fps 4 \
             --out .agent/visual-runs/latest \
             --routes home=/,about=/about/,notes=/notes/,portfolio=/portfolio/,store=/store/ \

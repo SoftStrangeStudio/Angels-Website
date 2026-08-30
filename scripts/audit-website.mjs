@@ -12,7 +12,7 @@ const DEFAULT_VIEWPORTS = [
 
 function parseArgs(argv) {
   const args = {
-    base: "https://angelberger09.github.io/Website/",
+    base: "https://softstrangestudio.github.io/Angels-Website/",
     out: "logs",
     routes: DEFAULT_ROUTES,
     timeout: 45000,
@@ -46,7 +46,7 @@ function ensureTrailingSlash(value) {
 
 function routeUrl(base, route) {
   const normalizedBase = ensureTrailingSlash(base);
-  const normalizedRoute = route.replace(/^\/Website\/?/, "").replace(/^\//, "");
+  const normalizedRoute = route.replace(/^\/Angels-Website\/?/, "").replace(/^\//, "");
   return new URL(normalizedRoute, normalizedBase).toString();
 }
 

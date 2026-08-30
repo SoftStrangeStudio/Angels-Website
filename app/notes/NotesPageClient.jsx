@@ -29,7 +29,7 @@ function sortPublishedPosts(posts) {
     .sort((a, b) => new Date(b.date || 0).getTime() - new Date(a.date || 0).getTime());
 }
 
-export default function NotesPageClient({ routeBase = "/Website/notes", routeLabel = "Studio Notes" }) {
+export default function NotesPageClient({ routeBase = "/Angels-Website/notes", routeLabel = "Studio Notes" }) {
   const [state, setState] = useState({ status: "loading", posts: [], error: null });
 
   useEffect(() => {
@@ -105,8 +105,8 @@ export default function NotesPageClient({ routeBase = "/Website/notes", routeLab
       <EditorialNext
         title="Continue from the reading table"
         links={[
-          { eyebrow: "Look", title: "Selected work", description: "Projects and experiments from the studio.", href: "/Website/portfolio/" },
-          { eyebrow: "Return", title: "Studio home", description: "Go back to the full room map.", href: "/Website/" }
+          { eyebrow: "Look", title: "Selected work", description: "Projects and experiments from the studio.", href: "/Angels-Website/portfolio/" },
+          { eyebrow: "Return", title: "Studio home", description: "Go back to the full room map.", href: "/Angels-Website/" }
         ]}
       />
     </EditorialPage>
