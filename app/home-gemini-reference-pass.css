@@ -3,7 +3,7 @@
   position: fixed;
   z-index: 20;
   inset: 0 0 auto;
-  height: 9.6rem;
+  height: 5.65rem;
   color: #fffdf8;
   background-color: var(--green);
   background-image: var(--grain);
@@ -13,8 +13,8 @@
 
 .reference-header::after {
   position: absolute;
-  inset: auto 0 -0.95rem;
-  height: 1.2rem;
+  inset: auto 0 -0.62rem;
+  height: 0.82rem;
   content: "";
   background: var(--cream);
   z-index: 1;
@@ -24,8 +24,8 @@
 /* Keep the clipped edge opaque while content scrolls behind the fixed header. */
 .reference-header::before {
   position: absolute;
-  inset: auto 0 -0.95rem;
-  height: 1.2rem;
+  inset: auto 0 -0.62rem;
+  height: 0.82rem;
   content: "";
   background-color: var(--green);
   background-image: var(--grain);
@@ -35,62 +35,44 @@
 
 .reference-header__shell {
   position: relative;
-  display: grid;
-  grid-template-rows: auto auto;
-  justify-items: center;
-  align-items: center;
   height: 100%;
-  padding: 0.9rem 1rem 1.2rem;
-}
-
-.reference-header__brand {
-  position: absolute;
-  top: 0.95rem;
-  left: 1rem;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.55rem;
-  color: rgba(255, 255, 255, 0.82);
-  font-size: 0.92rem;
-  font-weight: 700;
-  text-decoration: none;
-}
-
-.reference-header__brand-mark {
-  width: 0.9rem;
-  height: 0.9rem;
-  border-radius: 0.16rem;
-  background: var(--ochre);
-  box-shadow: 0.3rem 0 0 var(--coral), 0 0.3rem 0 var(--blue);
-  transform: rotate(45deg);
+  padding: 0 1.25rem;
 }
 
 .reference-header__title {
-  margin: 0.35rem 0 0;
+  position: absolute;
+  top: 50%;
+  left: 1.25rem;
+  z-index: 2;
+  margin: 0;
   color: #fffdf8;
   font-family: "Snell Roundhand", "Apple Chancery", "Segoe Script", cursive;
-  font-size: clamp(2.8rem, 5vw, 4.15rem);
+  font-size: clamp(1.7rem, 2.9vw, 2.6rem);
   font-weight: 400;
   line-height: 0.95;
   letter-spacing: -0.03em;
-  text-align: center;
   text-decoration: none;
   text-shadow: 0 0.18rem 0.5rem rgba(0, 0, 0, 0.14);
+  transform: translateY(-50%);
 }
 
 .reference-header__nav {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  gap: clamp(1rem, 2.4vw, 1.8rem);
-  margin-top: 0.9rem;
+  gap: clamp(0.8rem, 2vw, 1.55rem);
+  margin: 0;
+  transform: translate(-50%, -50%);
 }
 
 .reference-header__nav-link {
   padding-bottom: 0.22rem;
   color: rgba(255, 255, 255, 0.76);
   border-bottom: 2px solid transparent;
-  font-size: 0.78rem;
+  font-size: 0.72rem;
   font-weight: 800;
   letter-spacing: 0.16em;
   text-decoration: none;
@@ -106,7 +88,7 @@
 /* Homepage reference composition */
 .reference-home-page {
   min-height: 100vh;
-  padding: 10.6rem 0 1rem;
+  padding: 6.8rem 0 1rem;
 }
 
 .reference-home-sheet {
@@ -260,7 +242,7 @@
   width: min(calc(100% - 1.5rem), 64rem);
   min-height: 100vh;
   margin: 0 auto;
-  padding: 11.5rem 0 4rem;
+  padding: 7.5rem 0 4rem;
 }
 
 .editorial-hero,
@@ -596,26 +578,34 @@
 .editorial-footer small { color: var(--muted); }
 
 @media (max-width: 1100px) {
+  .reference-header { height: 7.2rem; }
+  .reference-header__title { top: 1.55rem; }
+  .reference-header__nav {
+    top: 5.15rem;
+    width: 100%;
+    padding-inline: 1rem;
+  }
+  .reference-home-page { padding-top: 8.35rem; }
+  .editorial-page { padding-top: 9rem; }
   .reference-card-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
 @media (max-width: 720px) {
-  .reference-header { height: auto; min-height: 9rem; }
-  .reference-header__shell { padding: 0.8rem 0.75rem 1.15rem; }
-  .reference-header__brand { position: static; justify-self: start; margin-bottom: 0.35rem; font-size: 0.75rem; }
-  .reference-header__title { font-size: clamp(2rem, 11vw, 3rem); }
-  .reference-header__nav { flex-wrap: nowrap; justify-content: center; width: 100%; gap: 0.62rem; margin-top: 0.75rem; overflow: visible; padding: 0.25rem 0; }
+  .reference-header { height: 7.2rem; }
+  .reference-header__shell { padding: 0 0.75rem; }
+  .reference-header__title { top: 1.55rem; left: 0.9rem; font-size: clamp(1.65rem, 8.2vw, 2.35rem); }
+  .reference-header__nav { top: 5.2rem; justify-content: flex-start; width: 100%; gap: 0.78rem; overflow-x: auto; padding: 0.25rem 0.75rem 0.4rem; transform: translate(-50%, -50%); }
   .reference-header__nav::-webkit-scrollbar { display: none; }
   .reference-header__nav-link { flex: 0 0 auto; font-size: 0.58rem; letter-spacing: 0.1em; }
 
-  .reference-home-page { padding-top: 10.2rem; }
+  .reference-home-page { padding-top: 8.4rem; }
   .reference-home-sheet__body { min-height: auto; }
   .reference-card-grid { grid-template-columns: 1fr; padding-inline: 0.75rem; }
   .reference-card { min-height: 0; }
   .reference-card__art { height: min(105vw, 24rem); }
   .reference-home-sheet__ornament { display: none; }
 
-  .editorial-page { width: min(calc(100% - 1rem), 64rem); padding-top: 10.8rem; }
+  .editorial-page { width: min(calc(100% - 1rem), 64rem); padding-top: 8.8rem; }
   .editorial-hero { grid-template-columns: 1fr; gap: 1.5rem; min-height: 0; }
   .editorial-hero h1 { font-size: clamp(2.5rem, 13vw, 4.1rem); }
   .editorial-photo--hero { height: min(115vw, 28rem); }

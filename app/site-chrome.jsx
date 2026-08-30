@@ -35,10 +35,6 @@ export function SiteHeader() {
   return (
     <header className="reference-header" aria-label="Site header">
       <div className="reference-header__shell">
-        <a className="reference-header__brand" href="/Angels-Website/" aria-label="Soft Strange Studio home">
-          <span className="reference-header__brand-mark" aria-hidden="true" />
-          <span>Soft Strange Studio</span>
-        </a>
         <a className="reference-header__title" href="/Angels-Website/">Soft Strange Studio</a>
         <nav className="reference-header__nav" aria-label="Primary">
           {navItems.map((item) => {
