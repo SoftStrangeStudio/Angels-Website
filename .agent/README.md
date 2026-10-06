@@ -28,6 +28,10 @@ Only store public-safe distilled lessons here. Do not store raw private conversa
 5. For feedback, use `.agent/feedback/README.md` and the intake/extraction workflow.
 6. After changes, update the change log, matrices, memory, and relationship maps as needed.
 
+## Change boundary
+
+- Do not edit files outside `.agent/` unless Angel specifically directs that change. Discussion, review, and design exploration do not authorize Website implementation.
+
 ## Feedback workflow
 
 Small feedback points should be transformed into reusable public-safe lessons when they affect future work.

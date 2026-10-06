@@ -11,19 +11,22 @@ This file stores distilled, public-safe memory for the Website repo.
 - Notes and post readers consume published public Blog data with public-path and raw-GitHub fallbacks.
 - The shared route view layer lives in `app/editorial-page.jsx`.
 - The shared chrome lives in `app/site-chrome.jsx`.
-- The active visual CSS is limited to `app/globals.css` and `app/home-gemini-reference-pass.css`.
-- The homepage mounts a fixed, pointer-transparent WebGL2 torn-paper layer through `PaperScrollExperience`; all other routes remain on the shared editorial system.
+- Global visual CSS uses `app/globals.css` and `app/home-gemini-reference-pass.css`; the homepage background uses `app/paper-scroll-experience.module.css`.
+- The homepage mounts a fixed, pointer-transparent WebGL2 torn-paper layer through `PaperScrollExperience`, driven by real native scroll in both directions with no runway or rebasing. The shared fixed footer matches the header, peeks by 12px until the document bottom, and then slides fully up, with no margin underneath; all other routes remain on the editorial system.
 - The GitHub Pages base path is `/Angels-Website`; runtime links and public assets must use that exact prefix.
 - Older pass styles remain as historical artifacts but are not imported at runtime.
 - Editorial image assets live in `public/images/editorial/`.
 
 ## Active direction
 
-- Match the approved Gemini reference across the whole site: sage torn-paper header, centered script identity, warm cream paper, serif editorial hierarchy, taped images, and visible soft shadows.
+- Match the approved Gemini reference across the whole site: sage torn-paper header, relaxed handwritten identity, light dot-grid notebook paper, Arial reading text with handwritten accents, taped images, and visible soft shadows.
 - Secondary pages use one portrait editorial column made of vertically stacked paper cards.
 - Use real source or generated imagery instead of CSS-drawn placeholder scenes.
+- The header paper layer uses an irregular textured SVG tear with edge fibers and a soft shadow; avoid repeating zigzag cuts and keep the mobile foldout unclipped.
+- The studio wordmark uses custom SVG pen paths that write themselves on arrival, with immediate complete lettering for reduced motion.
+- Use loose Kalam handwriting on short flavor text, Arial for main reading, and short welcoming copy with lighter headings.
 - Keep public copy warm and visitor-facing; internal publishing contracts and implementation details stay offstage.
-- Preserve direct top navigation and a visible active-route cue.
+- Use a full navigation banner above 720px and a native Menu foldout on mobile; keep visible active-route cues and readable 48px mobile links.
 - Store pages must use honest availability language and never imply fake inventory.
 - Blog compatibility routes should feel identical to the Notes room rather than forming a second design system.
 

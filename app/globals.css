@@ -1,7 +1,7 @@
 :root {
   color-scheme: light;
-  --cream: #f7f3e8;
-  --paper: #fffaf0;
+  --cream: #fbfbf8;
+  --paper: #fffefa;
   --paper-deep: #eee7d8;
   --ink: #332c2a;
   --muted: #6f6661;
@@ -32,9 +32,10 @@ body {
   overflow-x: hidden;
   color: var(--ink);
   background-color: var(--cream);
-  background-image: var(--grain);
-  background-size: 38rem 38rem;
-  font-family: "Avenir Next", Avenir, "Gill Sans", sans-serif;
+  background-image: radial-gradient(circle at 10px 10px, #bfc7c0 0.75px, transparent 1px);
+  background-size: 20px 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.65;
   text-rendering: optimizeLegibility;
 }
 
@@ -53,7 +54,7 @@ figure {
 h1,
 h2,
 h3 {
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: Arial, Helvetica, sans-serif;
   font-weight: 500;
 }
 

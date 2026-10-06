@@ -1,6 +1,5 @@
 .experience {
   position: relative;
-  min-height: 100vh;
   isolation: isolate;
   background: #5d7563;
 }
@@ -33,26 +32,4 @@
   border-radius: 0;
   background: transparent;
   box-shadow: none;
-}
-
-.transition,
-.runway {
-  position: relative;
-  z-index: 2;
-  width: 100%;
-  pointer-events: none;
-}
-
-.transition {
-  height: 100vh;
-}
-
-.runway {
-  height: 600vh;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .runway {
-    height: 100vh !important;
-  }
 }

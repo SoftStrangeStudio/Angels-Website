@@ -3,6 +3,7 @@ precision highp float;
 
 uniform vec2 uResolution;
 uniform vec2 uPaperBounds;
+uniform vec2 uCssResolution;
 uniform float uPaperOffset;
 uniform float uReducedMotion;
 
@@ -59,18 +60,19 @@ void main() {
   float exteriorGrain = noise21(vec2(pixel.x * 0.11, worldY * 0.09)) - 0.5;
   exterior += exteriorGrain * 0.018;
 
-  float broad = fbm(vec2(pixel.x * 0.0022, worldY * 0.0024));
-  float fibers = noise21(vec2(pixel.x * 0.36 + worldY * 0.015, worldY * 0.17));
-  float longFiber = fbm(vec2(pixel.x * 0.018, worldY * 0.095));
-  vec3 paper = vec3(0.925, 0.895, 0.772);
-  paper += (broad - 0.5) * vec3(0.075, 0.062, 0.038);
-  paper += (fibers - 0.5) * 0.022;
-  paper += smoothstep(0.76, 0.96, longFiber) * vec3(0.030, 0.023, 0.010);
+  vec3 paper = vec3(0.985, 0.985, 0.973);
+  vec2 cssPixel = uv * max(uCssResolution, vec2(1.0));
+  vec2 gridPosition = vec2(cssPixel.x, cssPixel.y + paperOffset);
+  vec2 dotCell = mod(gridPosition, 20.0) - vec2(10.0);
+  float dotDistance = length(dotCell);
+  float dotAA = max(fwidth(dotDistance), 0.25);
+  float dotMask = 1.0 - smoothstep(0.75 - dotAA, 0.75 + dotAA, dotDistance);
+  paper = mix(paper, vec3(0.69, 0.73, 0.70), dotMask * 0.65);
 
   float edgeDistance = max(signedPaper, 0.0) * uResolution.x;
   float edgeShade = exp(-edgeDistance * 0.10);
-  paper *= 1.0 - edgeShade * 0.13;
-  paper += exp(-edgeDistance * 0.34) * vec3(0.035, 0.025, 0.008);
+  paper *= 1.0 - edgeShade * 0.045;
+  paper += exp(-edgeDistance * 0.34) * vec3(0.01);
 
   vec3 color = exterior - shadowMask * vec3(0.14, 0.13, 0.10);
   color = mix(color, paper, paperMask);
