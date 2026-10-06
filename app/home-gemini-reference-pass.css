@@ -805,3 +805,15 @@
 @media (prefers-reduced-motion: reduce) {
   .studio-wordmark path { animation: none; opacity: 1; stroke-dashoffset: 0; }
 }
+
+/* Real studio photos keep their full frame and handwritten captions. */
+.studio-photo-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 14rem), 1fr)); gap: 1.25rem; align-items: start; }
+.studio-photo { margin: 0; padding: 0.65rem 0.65rem 0.9rem; background: #fffefa; box-shadow: 0 0.5rem 1rem rgba(48, 40, 34, 0.12); }
+.studio-photo img { width: 100%; height: auto; max-height: 32rem; object-fit: contain; }
+.studio-photo figcaption { margin-top: 0.65rem; font: 400 1.15rem/1.5 "Studio Flavor", cursive; text-align: center; color: var(--green-dark); }
+.studio-photo-credit { margin: 1.25rem 0 0; font-size: 0.9rem; }
+.editorial-photo--hero:has(img[src$="birch-tree-from-the-deck.jpg"]) { height: auto; aspect-ratio: 4032 / 1937; }
+.editorial-photo--hero:has(img[src$="birch-tree-from-the-deck.jpg"]) img { height: 100%; }
+.reference-card__art img[src$="gizmo-and-angel-floor-time.jpg"] { object-position: center 58%; }
+
+.editorial-section h2[id] { scroll-margin-top: 9rem; }

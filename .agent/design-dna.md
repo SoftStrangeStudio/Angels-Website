@@ -41,4 +41,4 @@ Store conversation-provided design references in [`.agent/images/`](images/READM
 
 ## Direction decisions from this conversation
 
-No new decisions recorded yet. Add only after Angel confirms an inferred idea belongs in the durable direction.
+2026-10-06: Angel approved using the eleven personal/project photos in the reviewed page placements. Keep Home calm with the octopus Art card and Angel/Gizmo About card; place the photo stories in Notes, supervisors in About, and credited crochet previews in Art and Shop. Shop photos remain previews, not available inventory.

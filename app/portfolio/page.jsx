@@ -6,6 +6,7 @@ import {
   EditorialSection,
   editorialImages
 } from "../editorial-page";
+import { studioPhotos } from "../studio-photos";
 import { portfolioPieces, portfolioProcess } from "../site-data";
 
 export const metadata = {
@@ -30,6 +31,13 @@ export default function PortfolioPage() {
       image={editorialImages.art}
       imageAlt="An open artist sketchbook with a coastal watercolor and botanical studies"
     >
+      <EditorialSection eyebrow="Made by hand" title="Small crochet projects" intro="Soft creatures and pieces taking shape, stitch by stitch.">
+        <div className="editorial-card-list">
+          <EditorialCard eyebrow="Crochet" title="Pink octopus" description="A little pink companion and a future project direction." image={studioPhotos.octopus} imageAlt="A small pink crochet octopus held beside a window" details={["Pattern credit: @blackcatstitchez"]} />
+          <EditorialCard eyebrow="Work in progress" title="Sunburst granny-square bag" description="Purple, green and yellow squares becoming a bag." image={studioPhotos.bag} imageAlt="Colorful crochet squares being assembled into a bag" href="/Angels-Website/notes/#making-the-bag" />
+        </div>
+        <p className="studio-photo-credit">Granny-square pattern: <a href="https://www.katiegetscreative.com/2024/08/how-to-make-a-sunburst-granny-square.html">Katie Gets Creative</a>.</p>
+      </EditorialSection>
       <EditorialSection
         eyebrow="Selected work"
         title="A small public archive"

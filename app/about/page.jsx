@@ -6,6 +6,7 @@ import {
   EditorialSection,
   editorialImages
 } from "../editorial-page";
+import { studioPhotos, StudioPhoto } from "../studio-photos";
 import { aboutPathways, aboutPrinciples, aboutSections } from "../site-data";
 
 export const metadata = {
@@ -21,9 +22,15 @@ export default function AboutPage() {
       eyebrow="About the studio"
       title="A small studio with a big, strange heart."
       intro="Soft Strange Studio is Angel Berger’s public home for thoughtful websites, honest notes, creature work, and small creative things made with care."
-      image={editorialImages.about}
-      imageAlt="An ivy-covered doorway opening into a small sunlit art studio"
+      image={studioPhotos.angel}
+      imageAlt="Angel having floor time with Gizmo, a black and white dog"
     >
+      <EditorialSection eyebrow="Meet the helpers" title="Studio supervisors" intro="Gizmo and Panda keep the studio company.">
+        <div className="studio-photo-grid">
+          <StudioPhoto src={studioPhotos.gizmo} alt="Gizmo, a black and white dog, watching through a glass door" caption="Gizmo — junior supervisor" />
+          <StudioPhoto src={studioPhotos.panda} alt="Panda, a shaggy black and white dog, resting on the floor" caption="Panda — senior supervisor" />
+        </div>
+      </EditorialSection>
       <EditorialSection
         eyebrow="Studio shape"
         title="What this place holds"

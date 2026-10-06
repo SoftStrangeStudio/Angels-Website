@@ -8,6 +8,7 @@ import {
   EditorialSection,
   editorialImages
 } from "../editorial-page";
+import { studioPhotos, StudioPhotoNotes } from "../studio-photos";
 import { INDEX_URLS } from "../site-data";
 
 async function fetchPostsIndex() {
@@ -53,9 +54,10 @@ export default function NotesPageClient({ routeBase = "/Angels-Website/notes", r
       eyebrow={routeLabel}
       title="Honest notes from the studio table."
       intro="Essays, updates, reflections, and small observations gathered into one calm reading room. Published notes appear newest first."
-      image={editorialImages.notes}
-      imageAlt="An open illustrated studio journal with botanical studies, a fountain pen, and a warm mug"
+      image={studioPhotos.birch}
+      imageAlt="A birch tree and countryside beneath a blue, cloud-filled sky, seen from the deck"
     >
+      <StudioPhotoNotes />
       <EditorialSection
         eyebrow="Writing shelf"
         title="Read the latest notes"

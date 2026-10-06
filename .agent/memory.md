@@ -15,7 +15,7 @@ This file stores distilled, public-safe memory for the Website repo.
 - The homepage mounts a fixed, pointer-transparent WebGL2 torn-paper layer through `PaperScrollExperience`, driven by real native scroll in both directions with no runway or rebasing. The shared fixed footer matches the header, peeks by 12px until the document bottom, and then slides fully up, with no margin underneath; all other routes remain on the editorial system.
 - The GitHub Pages base path is `/Angels-Website`; runtime links and public assets must use that exact prefix.
 - Older pass styles remain as historical artifacts but are not imported at runtime.
-- Editorial image assets live in `public/images/editorial/`.
+- Editorial image assets live in `public/images/editorial/`; approved personal/project photos live in `public/images/studio/`. Shared figures and static Notes photo stories are in `app/studio-photos.jsx`, while the external published-post feed remains separate.
 
 ## Active direction
 

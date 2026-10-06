@@ -12,8 +12,8 @@ const homeCards = [
     href: "/Angels-Website/portfolio/",
     title: "Art",
     description: "Creatures, coastlines, and everyday magic.",
-    image: "/Angels-Website/images/editorial/art-sketchbook.jpg",
-    imageAlt: "An illustrated sketchbook filled with a coastal watercolor and botanical drawings"
+    image: "/Angels-Website/images/studio/pink-crochet-octopus.jpg",
+    imageAlt: "A small pink crochet octopus held beside a window"
   },
   {
     href: "/Angels-Website/store/",
@@ -26,8 +26,8 @@ const homeCards = [
     href: "/Angels-Website/about/",
     title: "About",
     description: "Meet the person behind the studio.",
-    image: "/Angels-Website/images/editorial/about-studio.jpg",
-    imageAlt: "An illustrated ivy-covered doorway opening into a small sunlit art studio"
+    image: "/Angels-Website/images/studio/gizmo-and-angel-floor-time.jpg",
+    imageAlt: "Angel resting on the floor with Gizmo"
   }
 ];
 

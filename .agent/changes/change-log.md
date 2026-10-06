@@ -2,6 +2,15 @@
 
 This log uses local project time in `America/New_York`.
 
+## 2026-10-06 — Approved studio photo placements
+
+- Pushed the existing paper design as `9de2e14` before implementing the authorized photo placements.
+- Copied eleven approved photos into `public/images/studio/` and added shared full-frame photo figures with intrinsic dimensions, handwritten captions, and short static Notes entries.
+- Home Art/About use the octopus and Angel/Gizmo; Notes uses the birch hero plus bag, paired sunsets, and ordered Chomp sequence; About adds studio supervisors; Art and Shop add credited crochet cards with honest preview status.
+- Preserved the published-notes feed and kept website-reference screenshots in `.agent/`.
+- Reviewed Home desktop, About mobile, Notes stories and Shop preview; all five routes and eleven image assets returned HTTP 200. Production build and diff whitespace checks passed.
+- Evidence: `logs/studio-photos-review/`.
+
 ## 2026-10-05 — Matching footer with paper-edge peek
 
 - Made the footer a fixed full-width sage banner using the header's paper asset flipped vertically, white pen wordmark, and handwritten tagline.

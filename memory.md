@@ -33,7 +33,7 @@ Soft Strange Studio is a public Next.js site for honest notes, selected work, fu
 
 - The whole site follows the approved Gemini reference: sage torn-paper header, relaxed handwritten wordmark, light dot-grid notebook paper, clear Arial reading text with handwritten accents, taped editorial images, and soft physical shadows.
 - Secondary pages use one portrait editorial column with vertically stacked cards.
-- Generated watercolor assets live in `public/images/editorial/` and map consistently to Notes, Art, Shop, and About.
+- Generated watercolor assets remain in `public/images/editorial/`. Approved real photos live in `public/images/studio/`; `app/studio-photos.jsx` owns the reusable photo figures and static Notes entries. Home Art/About use the octopus and Angel/Gizmo, Notes uses the birch and photo stories, About includes supervisors, and Art/Shop include credited crochet previews.
 - Visible copy stays human-facing. Internal feed contracts, readiness machinery, and source implementation details stay offstage.
 - Store content must remain honest about availability; do not invent inventory or buying links.
 - Blog compatibility routes remain available but render the same Notes and reader views.

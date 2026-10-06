@@ -6,6 +6,7 @@ import {
   EditorialSection,
   editorialImages
 } from "../editorial-page";
+import { studioPhotos } from "../studio-photos";
 import { storePromises, storeSections } from "../site-data";
 
 export const metadata = {
@@ -22,6 +23,9 @@ export default function StorePage() {
       image={editorialImages.shop}
       imageAlt="Botanical studio goods including a canvas tote, mug, notebook, stickers, and paper tags"
     >
+      <EditorialSection eyebrow="A future possibility" title="Soft little companions" intro="A glimpse at a crochet direction, rather than an item ready to buy.">
+        <EditorialCard eyebrow="Crochet preview" title="Pink octopus" description="A small, soft creature. This preview is not available to order." image={studioPhotos.octopus} imageAlt="A pink crochet octopus held beside a window" status="Preview only" details={["Pattern credit: @blackcatstitchez"]} />
+      </EditorialSection>
       <EditorialSection
         eyebrow="Preparing slowly"
         title="What may arrive on the shelf"

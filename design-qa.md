@@ -121,3 +121,10 @@ final result: passed
 - Mobile reviewed with only the 12px torn edge showing at the top of the page, fully open at the bottom, and tucked again on upward scrolling. Desktop and About also reach the open bottom state.
 - Dock and footer both measured 165px on desktop, with 0px bottom gap and no horizontal overflow. Discarded an early shader-loading capture and saved the settled page instead.
 - Build, lint/type validation, static export, and `git diff --check` passed. Screenshots are in `logs/footer-peek-review/`.
+
+## 2026-10-06 — Studio photos
+
+- Applied all eleven approved photo placements across Home, Notes, About, Art, and Shop. Captions preserve the three-frame Chomp order; crochet previews carry supplied pattern credits and do not imply availability.
+- Reviewed Home desktop, About mobile, Notes photos, and Shop preview. About and Notes mobile had no observed horizontal overflow. Preserved intrinsic image dimensions and a landscape birch hero.
+- Five route and eleven photo asset HEAD requests returned HTTP 200. Final production build with lint/type validation and static export passed after the intrinsic-dimension refinement.
+- Screenshots: `logs/studio-photos-review/`. The external notes feed is still fetched by its existing client; no upstream posts were edited.
